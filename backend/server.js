@@ -9,7 +9,8 @@ doenv.config();
 const app = express();
 app.use(cors());
 app.use(cors({
-  origin: 'http://localhost:5173'
+  origin: 'http://localhost:5173','https://skillnest-frontend-4joy.onrender.com'
+
 }));
 app.use(express.json());
 const port=process.env.PORT || 4000
