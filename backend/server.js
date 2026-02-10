@@ -8,6 +8,9 @@ import adminrouter from './routes/adminCourseRoutes.js'
 doenv.config();
 const app = express();
 app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173'
+}));
 app.use(express.json());
 const port=process.env.PORT || 4000
 mongoose.connect(process.env.MONGO_URI)
